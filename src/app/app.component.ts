@@ -7,7 +7,7 @@ import { Person } from './person';
   // providers: [PeopleService]
 })
 export class AppComponent {
-  title = 'Education Portal';
+  title = 'app';
   people: Array<Person>;
 
   constructor() {

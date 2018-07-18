@@ -1,12 +1,33 @@
 html {
-	font-family: sans-serif;
+    font-family: sans-serif;
+    font-size: 18px;
 	-webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
+
 }
 
 body {
     margin: 0;
+    align-content: center;
 
+
+}
+
+/* Text */
+
+#page {
+    font-size: 20px;
+    margin: 0;
+    height: 100%; 
+    background: url("https://wallpapermemory.com/uploads/375/blur-wallpaper-full-hd-1920x1080-133764.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center;  */
+    /* background-size: 100vh; */
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV6sSsVsLwnJ0yZ_zJ3q_zKmc80JGOWr-gUs1u3QiIWgNVuWHV"); */
+    /* background-repeat: repeat;  */
+    /* background-repeat: no-repeat; */
 }
 
 img {
@@ -18,23 +39,31 @@ img {
 
 main {
     border: 2px solid rgba(117, 44, 160, 0.5);
-    border-radius: 10px
+    border-radius: 10px;
 }
 
+#page {
+    /* width: 100vw; */
+    height: 100vh;
+    padding: 0 2em;
+}
 /* Title */
 header {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg);
-    font-family: fantasy; 
-    font-weight: 100;
+    font-weight: 2em;
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 1em;
 
 }
 
 main {
     text-align: center;
-    background-color: rgba(117, 44, 160, 0.5);
+    background-color: rgba(117, 44, 160, 0.3);
 }
 
 nav {
@@ -42,7 +71,11 @@ nav {
 }
 
 aside {
+    border: 2px solid rgba(117, 44, 160, 0.5);
+    border-radius: 10px;
 }
+
+
 
 nav > a {
     border: 1px solid rgb(204, 102, 196);
@@ -62,11 +95,8 @@ nav > a {
 footer {
     text-align: center;
     background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg);
-    font-family: fantasy; 
-    font-weight: 100;
     padding: 1em;
     border-radius: 10px;
-
 }
 
 
@@ -75,19 +105,19 @@ footer {
 
 
 @supports (display: grid) {
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 600px) {
     
-        /* Calculators box */
         #page {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 5fr 50px;
+            grid-template-rows: 1fr 50px 5fr 100px;
             margin: 1em 4em;
             column-gap: 0.5em;
             row-gap: .5em;
             grid-template-areas: 
             "head head head head head"
-            "nav cont cont cont aside"
+            "nav nav nav nav nav"
+            "cont cont cont cont aside"
             "footer footer footer footer footer";
         }  
 
@@ -111,5 +141,45 @@ footer {
              grid-area: footer;
         }
 
+    }
+/* Smartphone L */
+    @media only screen and (min-width : 320px) and (max-width : 480px) {
+    
+        #page {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+            margin: 1em 4em;
+            column-gap: 0.5em;
+            row-gap: .5em;
+            grid-template-areas: 
+            "head"
+            "nav"
+            "cont"
+            "aside"
+            "footer";
+        }
+
+
+        header {
+            grid-area: head;
+        }
+
+        .aside {
+             grid-area: aside;
+        }
+        
+        main {
+             grid-area: cont;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+        
+        footer {
+             grid-area: footer;
+        }
+    
     }
 }
