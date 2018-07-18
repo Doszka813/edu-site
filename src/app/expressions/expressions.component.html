@@ -1,0 +1,20 @@
+<h2>Calculator</h2>
+<!-- <h4>*ngIf, [(ngModel)] - Two Way Binging, One way binging, Event Binding (click)</h4> -->
+<form>
+  <label> Input number: </label>
+  <br>
+  <input [(ngModel)]="num1" type="number" name="num1" placeholder="...">
+  <br>
+  <br>
+  <label *ngIf="num1"> Input second number: </label>
+  <br>
+  <input *ngIf="num1" [(ngModel)]="num2" type="number" name="num2" placeholder="...">
+</form>
+<div *ngIf="num2"><p>Choose action: </p>
+<button (click)="add()">+</button><button (click)="minus()">-</button>
+<br>
+<button (click)="multiply()">*</button>
+<button (click)="divide()">/</button>
+<br>
+</div>
+<p *ngIf="num1 && num2">Result: {{ result | number: '1.2-6'}} </p>

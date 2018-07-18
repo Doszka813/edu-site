@@ -1,0 +1,10 @@
+<h1>List of people</h1>
+<div>
+<button (click)="Show=!Show">{{Show ? 'Hide' : 'Show'}}</button>
+<!-- Show / Hide list -->
+<div *ngIf="Show">
+<ul *ngFor="let person of people">
+  <li>id:{{person.id}} | {{person.name}} | {{person.email}}</li>
+</ul>
+</div>
+</div>

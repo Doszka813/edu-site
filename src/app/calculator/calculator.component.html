@@ -1,0 +1,26 @@
+<h2>BMI Calc</h2>
+<div class="calc">
+  <label for="heightField">Height: </label>
+  <input [(ngModel)]='height' type="number" name="height" size=10 placeholder="ex. 175 cm..."/>  
+  <br>
+  <br>
+  <label for="weightField">Weight: </label>
+  <input [(ngModel)]='weight' type="number" name="weight" size=10 placeholder="ex. 75 kg..."/>
+  <br>
+  <br>
+  <p>Gender:
+    <select name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+  </p>
+  <button (click)='calculateBmi()'
+  (click)='indicateRisk' >Calculate BMI</button>
+
+
+  <div class="result">
+      <h4>{{result | number: '1.2-2' }} </h4>
+      <h4 class="risk">{{risk}}</h4>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: 1px solid rgb(180, 66, 171);
+    margin: 5px 5px;
+    padding: 0.5em;
+    border-radius: 10px;
+    background-color:rgba(207, 101, 198, 0.726);
+    color: black;
+}
