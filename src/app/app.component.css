@@ -1,5 +1,5 @@
 html {
-    font-family: sans-serif;
+    font-family: 'Space Mono', monospace;
     font-size: 18px;
 	-webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
@@ -8,8 +8,9 @@ html {
 
 body {
     margin: 0 auto;
-    min-height: 100%;
-    min-width: 100%;
+    /* min-height: 100%;
+    min-width: 100%; */
+ 
 }
 
 html {
@@ -21,7 +22,8 @@ html {
 
 #page {
     font-size: 20px;
-    background:   #ffffff;
+    background:   #ddd2dd;
+    
     /* background: #000000; */
     /* background: -moz-linear-gradient(top, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
     background: -webkit-linear-gradient(top, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
@@ -35,15 +37,18 @@ img {
 	height: auto;
 }
 
-main {
+main, footer {
     border: 2px solid rgba(117, 44, 160, 0.5);
-    background-color: rgba(117, 44, 160, 0.3);
     border-radius: 10px;
+}
+
+main {
+    background-color: rgba(117, 44, 160, 0.3);
 }
 
 #page {
     display: grid;
-    width: 100vw;
+    /* ??? */
     height: 100vh;
     /* padding: 0 2em; */
 }
@@ -56,6 +61,8 @@ header {
     font-size: 1em;
     padding: 1em;
     background-color: #ff920d;
+    border-radius: 0 0 10px 10px;
+
     /* background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg); */
     /* background-repeat: repeat-x; */
 
@@ -97,7 +104,7 @@ nav > a {
 }
 footer {
     text-align: center;
-    background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg);
+    /* background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg); */
     padding: 1em;
     border-radius: 10px;
 }
@@ -128,6 +135,10 @@ footer {
 @supports (display: grid) {
     @media screen and (min-width: 800px) {
     
+        #page {
+            margin: 0 15% 0 15%;
+        }
+
         #page {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 50px 5fr 100px;
