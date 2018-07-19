@@ -7,31 +7,24 @@ html {
 }
 
 body {
-    margin: 0;
-    align-content: center;
-
-
+    margin: 0 auto;
+    min-height: 100%;
+    min-width: 100%;
 }
 
-/* Text */
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 #page {
     font-size: 20px;
-    margin: 0;
-    height: 100%; 
     background: #000000;
     background: -moz-linear-gradient(top, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
     background: -webkit-linear-gradient(top, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
     background: linear-gradient(to bottom, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
-    /* background: url("https://wallpapermemory.com/uploads/375/blur-wallpaper-full-hd-1920x1080-133764.jpg"); 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* background-position: center;  */
-    /* background-size: 100vh; */
-    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV6sSsVsLwnJ0yZ_zJ3q_zKmc80JGOWr-gUs1u3QiIWgNVuWHV"); */
-    /* background-repeat: repeat;  */
-    /* background-repeat: no-repeat; */
 }
 
 img {
@@ -43,43 +36,45 @@ img {
 
 main {
     border: 2px solid rgba(117, 44, 160, 0.5);
+    background-color: rgba(117, 44, 160, 0.3);
     border-radius: 10px;
 }
 
 #page {
-    /* width: 100vw; */
+    display: grid;
+    width: 100vw;
     height: 100vh;
-    padding: 0 2em;
+    /* padding: 0 2em; */
 }
 /* Title */
 header {
-    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg);
-    font-weight: 2em;
+    font-size: 1em;
     padding: 1em;
-    border-radius: 1em;
+    background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg);
+    background-repeat: repeat-x;
 
 }
 
 main {
     text-align: center;
-    background-color: rgba(117, 44, 160, 0.3);
+    font-size: 1.2em;
 }
 
 nav {
-     margin: 1em;
+    text-align: center;
+    margin: 1em;
 }
 
 aside {
     border: 2px solid rgba(117, 44, 160, 0.5);
     border-radius: 10px;
+    background-image: url(https://i.imgur.com/zcSqTAi.jpg);
+    
 }
-
-
 
 nav > a {
     border: 1px solid rgb(204, 102, 196);
@@ -87,6 +82,7 @@ nav > a {
     background-color:rgba(207, 101, 198, 0.726);
     color: black;
     }
+
 .routes {
     margin: 1em;
 }
@@ -94,6 +90,7 @@ nav > a {
 .a {
     border: 1px solid rgb(180, 66, 171);
     margin: 5px 5px;
+    font-size: 1em;
     padding: 0.5em;
 }
 footer {
@@ -127,15 +124,12 @@ footer {
 
 /* Media */
 @supports (display: grid) {
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 800px) {
     
         #page {
-            display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 50px 5fr 100px;
-            margin: 1em 4em;
-            column-gap: 0.5em;
-            row-gap: .5em;
+            grid-gap: 0.5em;
             grid-template-areas: 
             "head head head head head"
             "nav nav nav nav nav"
@@ -145,13 +139,11 @@ footer {
     }
 
 /* Smartphone L */
-    @media only screen and (min-width : 320px) and (max-width : 480px) {
+    @media only screen and (min-width : 320px) and (max-width : 800px) {
     
         #page {
-            display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 0.5fr 3fr 1fr 1fr;
-            margin: 1em 4em;
+            grid-template-rows: 1fr 0.5fr 3fr 3fr 1fr;
             column-gap: 0.5em;
             row-gap: .5em;
             grid-template-areas: 
