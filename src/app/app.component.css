@@ -21,10 +21,11 @@ html {
 
 #page {
     font-size: 20px;
-    background: #000000;
-    background: -moz-linear-gradient(top, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
+    background:   #ffffff;
+    /* background: #000000; */
+    /* background: -moz-linear-gradient(top, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
     background: -webkit-linear-gradient(top, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
-    background: linear-gradient(to bottom, #000000 0%, #8C8C8C 45%, #FFF7F9 100%);
+    background: linear-gradient(to bottom, #000000 0%, #8C8C8C 45%, #FFF7F9 100%); */
 }
 
 img {
@@ -54,8 +55,9 @@ header {
     text-align: center;
     font-size: 1em;
     padding: 1em;
-    background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg);
-    background-repeat: repeat-x;
+    background-color: #ff920d;
+    /* background-image: url(https://blog.spoongraphics.co.uk/wp-content/uploads/2014/01/15.jpg); */
+    /* background-repeat: repeat-x; */
 
 }
 
@@ -143,7 +145,7 @@ footer {
     
         #page {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 0.5fr 3fr 3fr 1fr;
+            grid-template-rows: 1fr 0.5fr 3fr 2fr 1fr;
             column-gap: 0.5em;
             row-gap: .5em;
             grid-template-areas: 
