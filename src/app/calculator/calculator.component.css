@@ -7,6 +7,10 @@
 
 .result {
     /* border: 2px solid #c96; */
-    margin: 1em;
-    
+    /* margin: 1em; */  
+}
+
+#resultIcon {
+    height: 10em;
+    height: auto;
 }
