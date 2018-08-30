@@ -29,6 +29,12 @@ export class ExpressionsComponent implements OnInit {
     this.result = this.num1 / this.num2;
   }
 
+  clear() {
+    this.num1 = 0;
+    this.num2 = 0;
+    this.result = 0;
+
+  }
   ngOnInit() {
   }
 

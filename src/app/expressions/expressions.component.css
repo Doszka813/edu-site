@@ -9,4 +9,12 @@ button {
     margin: 5px;  
     width: 2em;
     height: 2em;
+    cursor: pointer;
+}
+
+#clear {
+    height: 20px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
 }

@@ -17,4 +17,5 @@
 <button (click)="divide()">/</button>
 <br>
 </div>
-<p *ngIf="num1 && num2">Result: {{ result | number: '1.2-6'}} </p>
+<p *ngIf="num1 && num2" id="result">Result: {{ result | number: '1.2-6'}} </p>
+<button *ngIf="result" id="clear" (click)="clear()">Clear</button>

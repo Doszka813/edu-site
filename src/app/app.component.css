@@ -2,7 +2,6 @@ html {
     font-size: 18px;
 	-webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
-
 }
 
 * {
@@ -86,6 +85,7 @@ nav {
 }
 
 nav > a {
+    cursor: pointer;
     border: 1px solid #ff920d;
     border-radius: 5px;
     /* background-color: #ff920d; */
@@ -186,12 +186,15 @@ footer {
 /* Smartphone */
     @media only screen and (min-width : 300px) and (max-width : 800px) {
    
+        nav, footer {
+            min-height: 50px;
+        }
         nav > a {
             margin: 5px;
             font-size: 0.7em;        }
         #page {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 0.4fr 3fr 2fr 1fr;
+            grid-template-rows: 1fr 0.5fr 3fr 2fr 1fr;
             column-gap: 0.5em;
             row-gap: .5em;
             grid-template-areas: 
